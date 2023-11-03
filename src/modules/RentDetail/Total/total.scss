@@ -1,0 +1,132 @@
+$fs-xs: 12px;
+$fs-sm: 14px;
+$fs-md: 16px;
+$fs-lg: 22px;
+$fs-xl: 25px;
+$cl-black: black;
+$cl-white: white;
+$cl-gray: rgb(205, 205, 205);
+$cl-pink: #ff385c;
+
+.booking {
+  padding: 50px;
+  &__content {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid $cl-gray;
+    border-radius: 20px;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 5%);
+    .price-review {
+      display: flex;
+      justify-content: space-between;
+      .price {
+        span {
+          font-weight: bold;
+        }
+      }
+      .review {
+        svg {
+          color: $cl-pink;
+        }
+        .review-num {
+          color: $cl-gray;
+        }
+      }
+    }
+    .paid-form {
+      .check-in-out {
+        width: 100%;
+        margin: 0 auto;
+        .checkin {
+          border: 1px solid $cl-gray;
+          border-top-left-radius: 10px;
+          border-bottom-left-radius: 10px;
+          padding: 0 10px;
+          @media all and (max-width: 992px) {
+            border-radius: 10px;
+          }
+          label {
+            width: 100%;
+            font-size: $fs-md;
+            font-weight: bold;
+          }
+          .react-date-picker {
+            width: 100%;
+            .react-date-picker__wrapper {
+              border: none;
+              font-size: $fs-sm;
+            }
+          }
+        }
+        .checkout {
+          border: 1px solid $cl-gray;
+          border-top-right-radius: 10px;
+          border-bottom-right-radius: 10px;
+          padding: 0 10px;
+          @media all and (max-width: 992px) {
+            border-radius: 10px;
+          }
+          label {
+            width: 100%;
+            font-size: $fs-md;
+            font-weight: bold;
+          }
+          .react-date-picker {
+            width: 100%;
+            .react-date-picker__wrapper {
+              border: none;
+              font-size: $fs-sm;
+            }
+          }
+        }
+      }
+      .people {
+        border: 1px solid $cl-gray;
+        border-radius: 10px;
+        padding: 0 10px;
+        label {
+          width: 100%;
+          font-size: $fs-md;
+          font-weight: bold;
+        }
+        input {
+          width: 100%;
+          border: none;
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+      .paid {
+        padding: 20px 0;
+        text-align: center;
+        .btn-paid {
+          width: 100%;
+          border: 1px solid $cl-pink;
+          border-radius: 10px;
+          background-color: $cl-pink;
+          color: $cl-white;
+          padding: 15px 0;
+        }
+      }
+      .price-days {
+        display: flex;
+        justify-content: space-between;
+        .price {
+          text-decoration: underline;
+        }
+        .total-pricedays {
+        }
+      }
+      .fee {
+        display: flex;
+        justify-content: space-between;
+      }
+      .total {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}

@@ -1,0 +1,224 @@
+$fs-xxxs: 8px;
+$fs-xxs: 10px;
+$fs-xs: 12px;
+$fs-sm: 14px;
+$fs-md: 16px;
+$fs-lg: 22px;
+$fs-xl: 25px;
+$cl-black: black;
+$cl-white: white;
+$cl-gray: rgb(205, 205, 205);
+$cl-pink: #ff385c;
+
+.navbar {
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 80px;
+  border-bottom: 1px solid $cl-gray;
+
+  .header__container {
+    width: 92%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 10px 0;
+    display: flex;
+    .img-logo {
+    }
+
+    .end-nav {
+      justify-content: end;
+      a:first-child {
+        font-size: $fs-sm;
+        font-weight: 500;
+        color: black;
+      }
+      svg {
+        font-size: 20px;
+        color: black;
+      }
+      a:last-child {
+        border: 1px solid $cl-gray;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        svg:last-child {
+          font-size: 35px;
+          color: gray;
+        }
+      }
+      .dropdown {
+        .dropdown-toggle {
+          background: $cl-white;
+          border: 1px solid $cl-gray;
+          border-radius: 30px;
+          display: flex;
+          justify-content: space-between;
+          text-align: center;
+          align-items: center;
+          .toggle {
+            color: $cl-gray;
+            font-size: $fs-lg;
+          }
+          .person {
+            color: $cl-gray;
+            font-size: $fs-xl;
+          }
+        }
+        .dropdown-toggle::after {
+          content: none;
+        }
+        .dropdown-menu {
+          left: -35px;
+          .dropdown-item {
+            border: none;
+            padding: 10px 10px;
+            font-weight: 400;
+            font-size: $fs-md;
+          }
+          .dropdown-item:hover {
+            border-radius: 20px;
+            background-color: $cl-pink;
+            color: $cl-white;
+            transition: 0.2s linear;
+          }
+        }
+      }
+    }
+  }
+}
+.options {
+  padding: 80px 0;
+  display: block;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 0;
+  &__container {
+    width: 50%;
+    margin: 0 auto;
+    @media all and (max-width: 1200px) {
+      width: 60%;
+    }
+    @media all and (max-width: 960px) {
+      width: 70%;
+    }
+    @media all and (max-width: 768px) {
+      width: 80%;
+    }
+    @media all and (max-width: 640px) {
+      width: 90%;
+    }
+    @media all and (max-width: 576px) {
+      width: 100%;
+    }
+    .border {
+      flex: 0 0 1px;
+      height: 24px;
+      width: 1px;
+    }
+    .search {
+      display: block;
+      &__content {
+        border: 1px solid $cl-gray;
+        background-color: $cl-white;
+        border-radius: 30px;
+
+        display: flex;
+        justify-content: space-around;
+        padding: 5px 20px;
+        align-items: center;
+        &__item {
+          text-align: start;
+          border-right: 1px solid $cl-gray;
+          line-height: 15px;
+          padding: 0 10px;
+          @media all and (max-width: 300px) {
+            border: none;
+            width: 100%;
+          }
+          label {
+            font-size: $fs-xs;
+            font-weight: bold;
+            width: 100%;
+            @media all and (max-width: 576px) {
+              font-size: $fs-xxs;
+            }
+          }
+          input {
+            width: 100%;
+            border: none;
+            font-size: $fs-xs;
+            @media all and (max-width: 576px) {
+              font-size: $fs-xxs;
+
+              input::placeholder {
+                font-size: $fs-xxs;
+              }
+            }
+            &:focus {
+              outline: none;
+            }
+          }
+          &__locations {
+            position: relative;
+            .dropdown {
+              position: absolute;
+
+              max-height: 250px;
+              overflow-x: hidden;
+              visibility: hidden;
+              left: -20px;
+              top: 150%;
+              z-index: 10;
+
+              background-color: $cl-white;
+              border-radius: 20px;
+              box-shadow: 5px 5px 5px 5px rgb(0 0 0 / 8%),
+                6px 4px 12px rgb(0 0 0 / 5%);
+              &.v {
+                visibility: visible;
+              }
+              &__item {
+                display: flex;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+        .res-item {
+          @media all and (max-width: 300px) {
+            display: none;
+          }
+        }
+
+        .last-item {
+          border: none;
+        }
+
+        .btn-roomSearch {
+          background-color: $cl-pink;
+          color: $cl-white;
+
+          border: 1px solid $cl-pink;
+          border-radius: 50%;
+
+          font-size: $fs-lg;
+          width: 30px;
+          height: 30px;
+          line-height: 20px;
+          text-align: center;
+          svg {
+            font-size: $fs-md;
+          }
+          @media all and (max-width: 576px) {
+            width: 20px;
+            height: 20px;
+            line-height: 10px;
+          }
+        }
+      }
+    }
+  }
+}

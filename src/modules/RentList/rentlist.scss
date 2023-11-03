@@ -1,0 +1,50 @@
+$fs-xs: 12px;
+$fs-sm: 14px;
+$fs-md: 16px;
+$fs-lg: 22px;
+$fs-xl: 25px;
+$cl-black: black;
+$cl-white: white;
+$cl-gray: rgb(205, 205, 205);
+$cl-pink: #ff385c;
+
+.rent-list {
+  padding: 160px 0;
+  &__container {
+    width: 92%;
+    margin: 0 auto;
+    &__content {
+      .description {
+        font-size: $fs-sm;
+      }
+      .title {
+        margin: 40px 0;
+      }
+      .room-list {
+        .room {
+          cursor: pointer;
+          border: 1px solid $cl-gray;
+          border-radius: 20px;
+
+          margin: 20px 0;
+          padding: 20px 20px;
+          &__img {
+            img {
+              width: 100%;
+            }
+          }
+          &__info {
+            padding: 0 20px;
+            .price {
+              color: green;
+            }
+          }
+        }
+        .room:hover {
+          background-color: $cl-gray;
+          transition: all 0.2s ease-in;
+        }
+      }
+    }
+  }
+}
